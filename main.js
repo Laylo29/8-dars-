@@ -456,17 +456,110 @@
  
                                         //   3-misol
 
-let arr1 = [2, false, "Hello"]
-let arr2 = [null, 5, "Apple"]
-let arr3 = ["Username", false, 7]
+// let arr1 = [2, false, "Hello"]
+// let arr2 = [null, 5, "Apple"]
+// let arr3 = ["Username", false, 7]
 
-//                   //  concat bilan
+// //                   //  concat bilan
 // let res = arr1.concat(arr2 , arr3)
 
 
 
-                     // yoyvorish
-let natija = [...arr1, ...arr2,... arr3]
-console.log(natija)
+//                      // yoyvorish
+// let natija = [...arr1, ...arr2,... arr3]
+// console.log(natija)
 
-                                   
+                              //4-misol
+// let son1 = Number(prompt("1-sonni kiriting"))
+// let ishora = prompt("Ishorani kiriting (+, -, *, /)")
+// let son2 = Number(prompt("2-sonni kiriting"))
+// let natija;
+// switch (ishora) {
+//     case "+":
+//     natija = son1 + son2;
+//     break;
+//     case "-":
+//     natija = son1 - son2;
+//     break;
+//     case "*":
+//     natija = son1 * son2;
+//     break;
+//     case "/":
+//     natija = son1 / son2;
+//     break;
+//     default:
+//   console.log("Noto'g'ri ishora kiritildi");
+
+// }
+// console.log("Natija:", natija)
+                                   //5-misol
+// let arr1 = [7, 8, 9]
+// let arr2 = [6, 5, 4]
+// let arr3 = [3, 2, 1]
+// let hammaArr = arr1.concat(arr2, arr3)
+// let sortlanganArr = hammaArr.sort((a, b) => a - b)
+// console.log(sortlanganArr)
+
+
+
+                                   //100 bal uchun
+  //1 Memoization Function (Keshga olish) == Qimmat hisoblashlarni takrorlamaslik uchun natijalarni eslab qoluvchi funksiya. 
+//   function memoize(fn) {
+//     const cache = {};
+//     return function(n) {
+//       if (cache[n]) {
+//         console.log("Keshdan olindi");
+//         return cache[n];
+//       } else {
+//         const result = fn(n);
+//         cache[n] = result;
+//         return result;
+//       }
+//     };
+//   }
+  
+//   function kvadrat(n) {
+//     return n * n;
+//   }
+  
+//   const memoKvadrat = memoize(kvadrat);
+//   console.log(memoKvadrat(4)); // hisoblanadi
+//   console.log(memoKvadrat(4)); // keshdan olinadi  
+
+// 2 Debounce Function  ==  Biror funksiyani faqatgina ma’lum vaqt o‘tgach bajarilishini nazorat qiladi. Masalan, input yozishda har harfdan keyin emas, yozish tugagach ishga tushirish uchun.
+// function debounce(fn, delay) {
+//     let timer;
+//     return function(...args) {
+//       clearTimeout(timer);
+//       timer = setTimeout(() => fn(...args), delay);
+//     };
+//   }
+  
+//   function yozuv() {
+//     console.log("Yozuv saqlandi");
+//   }
+  
+//   const debouncedYozuv = debounce(yozuv, 1000);
+  
+//   // Faqat oxirgi chaqiriqdan keyin 1 soniya o‘tgach ishlaydi
+//   debouncedYozuv();
+//   debouncedYozuv();
+//   debouncedYozuv();
+
+// 3 Throttle Function  == Funksiya malum vaqt oraligida faqat bir marta bajariladi. Masalan, skroll paytida resursni tejash
+// function throttle(fn, limit) {
+//     let allowed = true;
+//     return function(...args) {
+//       if (allowed) {
+//         fn(...args);
+//         allowed = false;
+//         setTimeout(() => allowed = true, limit);
+//       }
+//     };
+//   }
+  
+//   function skroll() {
+//     console.log("Scroll event ishladi");
+//   }
+  
+//   const throttledScroll = throttle(skroll, 2000);
